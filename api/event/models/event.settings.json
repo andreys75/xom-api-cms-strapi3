@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "event"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250
+    },
+    "url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "listing_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "is_event": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_highlight": {
+      "type": "boolean",
+      "default": false
+    },
+    "article": {
+      "model": "articles",
+      "via": "event"
+    },
+    "eventslots": {
+      "via": "event",
+      "collection": "eventslot"
+    }
+  }
+}

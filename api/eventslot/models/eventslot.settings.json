@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventslots",
+  "info": {
+    "name": "eventslot"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "startingTime": {
+      "type": "date"
+    },
+    "endTime": {
+      "type": "date"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "eventXLink": {
+      "type": "string"
+    },
+    "event": {
+      "model": "event",
+      "via": "eventslots"
+    }
+  }
+}

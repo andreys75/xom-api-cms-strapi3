@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/eventslots",
+      "handler": "eventslot.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/eventslots/count",
+      "handler": "eventslot.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/eventslots/:id",
+      "handler": "eventslot.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/eventslots",
+      "handler": "eventslot.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/eventslots/:id",
+      "handler": "eventslot.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/eventslots/:id",
+      "handler": "eventslot.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

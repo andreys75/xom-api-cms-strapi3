@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subcategories",
+  "info": {
+    "name": "subcategory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "category": {
+      "via": "subcategories",
+      "model": "category"
+    },
+    "trainings": {
+      "via": "subcategory",
+      "collection": "training"
+    }
+  }
+}

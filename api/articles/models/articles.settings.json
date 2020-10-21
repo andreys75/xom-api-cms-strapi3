@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Articles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "content": {
+      "type": "richtext",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "listing_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "display_sidepanel": {
+      "type": "boolean",
+      "default": false
+    },
+    "icon": {
+      "type": "string",
+      "default": "add"
+    },
+    "training": {
+      "via": "articles",
+      "model": "training"
+    },
+    "event": {
+      "via": "article",
+      "model": "event"
+    }
+  }
+}
