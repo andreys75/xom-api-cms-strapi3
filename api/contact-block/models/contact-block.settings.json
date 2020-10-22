@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_blocks",
+  "info": {
+    "name": "ContactBlock"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

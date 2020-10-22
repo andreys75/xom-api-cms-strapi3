@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "maintenances",
+  "info": {
+    "name": "maintenance"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "routs": {
+      "type": "json"
+    }
+  }
+}
